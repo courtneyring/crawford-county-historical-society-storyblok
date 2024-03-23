@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getStoryblokApi, StoryblokComponent } from "@storyblok/react";
 
 
@@ -13,7 +12,7 @@ export default function Home(props) {
 
       <header>
         <h1>
-         test
+          test
         </h1>
       </header>
 
@@ -40,7 +39,6 @@ export async function getStaticProps() {
     props: {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
-    },
-    revalidate: 3600, // revalidate every hour
+    }
   };
 }

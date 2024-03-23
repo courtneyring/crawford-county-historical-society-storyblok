@@ -74,6 +74,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build with Next.js
+        env: 
+          NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN }} 
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
